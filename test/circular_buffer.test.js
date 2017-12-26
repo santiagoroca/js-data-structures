@@ -1,4 +1,4 @@
-const CircularBuffer = require('../src/index').CircularBuffer;
+const CircularBuffer = require('../index').CircularBuffer;
 
 test('Should PUSH 1 registers in a 1000 length Queue.', () => {
 	let queue = new CircularBuffer();
