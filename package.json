@@ -1,5 +1,5 @@
 {
-  "name": "data-structures",
+  "name": "jstandard",
   "version": "0.0.1",
   "description": "Common data structures implementation for javascript",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "keywords": [
     "javascript",
