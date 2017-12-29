@@ -85,3 +85,8 @@ test('Should POP and PUSH items and peek correctly.', () => {
 		queue.pop();
 	}
 });
+
+test('Should not return an error when pop called on a empty Queue.', () => {
+	let queue = new CircularBuffer(10);
+	queue.pop();
+});

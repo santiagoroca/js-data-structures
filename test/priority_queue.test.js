@@ -81,3 +81,8 @@ test('Should use custom comparator with object.', () => {
 		expect(queue.peek().value).toEqual(i);
 	}
 });
+
+test('Should not return an error when pop called on a empty list.', () => {
+	let list = new PriorityQueue();
+	list.pop();
+});
