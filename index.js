@@ -8,9 +8,13 @@ const LinkedList = require('./src/list/LinkedList');
 //Stacks
 const Stack = require('./src/stack/Stack');
 
+//Trees
+const BinarySearchTree = require('./src/tree/BinarySearchTree');
+
 module.exports = {
 	CircularBuffer: CircularBuffer,
 	PriorityQueue: PriorityQueue,
 	LinkedList: LinkedList,
-	Stack: Stack
+	Stack: Stack,
+	BinarySearchTree: BinarySearchTree
 }

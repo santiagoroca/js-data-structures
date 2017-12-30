@@ -1,20 +1,32 @@
 {
   "name": "jstandard",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Common data structures implementation for javascript",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/santiiiii/js-data-structures"
+  },
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest --coverage --verbose"
   },
   "keywords": [
     "javascript",
     "data",
     "structure",
-    "circularbuffer",
-    "priorityqueue"
+    "circular",
+    "buffer",
+    "priorit",
+    "yqueue",
+    "stack",
+    "linked",
+    "list",
+    "binary",
+    "search",
+    "tree"
   ],
   "author": "Santiago Roca",
   "license": "ISC",
