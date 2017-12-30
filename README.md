@@ -11,3 +11,38 @@ Javascript developer pays little to none attention to the correct usage of Data 
  - [Linked List](https://github.com/santiiiii/js-data-structures/tree/master/docs/LinkedList.md)
  - [Stack](https://github.com/santiiiii/js-data-structures/tree/master/docs/Stack.md)
  - [Binary Search Tree](https://github.com/santiiiii/js-data-structures/tree/master/docs/BinarySearchTree.md)
+
+ ### Usage Example ###
+
+```
+
+import { BinarySearchTree } from 'jstandard';
+
+//Create a new Binary Search Tree
+const binarySearchTree = new BinarySearchTree();
+
+//Set iteration mode to desired mode
+binarySearchTree.setIterationMode(binarySearchTree.INORDER);
+
+//Insert random values
+binarySearchTree.insert(1); 
+binarySearchTree.insert(4); 
+binarySearchTree.insert(3); 
+binarySearchTree.insert(6); 
+binarySearchTree.insert(7);
+binarySearchTree.insert(2); 
+binarySearchTree.insert(3); 
+binarySearchTree.insert(9); 
+binarySearchTree.insert(19); 
+binarySearchTree.insert(20); 
+binarySearchTree.insert(3); 
+binarySearchTree.insert(15);
+
+//Iterate natively
+for (let node of binarySearchTree) {
+	console.log(node.value);
+}
+
+// OUPUT 1 2 3 3 3 4 6 7 9 15 19 20
+
+```
