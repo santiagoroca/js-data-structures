@@ -17,6 +17,11 @@
     "javascript",
     "data",
     "structure",
+    "structures",
+    "unit",
+    "test",
+    "coverage",
+    "100%",
     "circular",
     "buffer",
     "priorit",
@@ -26,7 +31,9 @@
     "list",
     "binary",
     "search",
-    "tree"
+    "tree",
+    "ordered",
+    "set"
   ],
   "author": "Santiago Roca",
   "license": "ISC",

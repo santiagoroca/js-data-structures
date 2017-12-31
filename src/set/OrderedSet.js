@@ -5,6 +5,7 @@ const NoAllowedArgumentError = require('../error/NoAllowedArgumentError');
 const UNION_METHOD_ARGUMENT_ERROR = 'union method only allows OrderedSet as argument.';
 const INTERSECTION_METHOD_ARGUMENT_ERROR = 'intersection method only allows OrderedSet as argument.';
 const DIFERENCE_METHOD_ARGUMENT_ERROR = 'diference method only allows OrderedSet as argument.';
+const EQUALS_METHOD_ARGUMENT_ERROR = 'equals method only allows OrderedSet as argument.';
 
 class OrderedSet extends BinarySearchTree {
 
@@ -67,12 +68,6 @@ class OrderedSet extends BinarySearchTree {
 
 		let difference = new OrderedSet();
 
-		for (let node of set) {
-			if (!this.contains(node.value)) {
-				difference.insert(node.value);
-			}
-		}
-
 		for (let node of this) {
 			if (!set.contains(node.value)) {
 				difference.insert(node.value);
@@ -85,7 +80,11 @@ class OrderedSet extends BinarySearchTree {
 	subset (set) {
 		let difference = new OrderedSet();
 
-		for (let node in set) {
+		if (this.size() < set.size()) {
+			return false;
+		}		
+
+		for (let node of set) {
 			if (!this.contains(node.value)) {
 				return false;
 			}
@@ -95,20 +94,18 @@ class OrderedSet extends BinarySearchTree {
 	}
 
 	equals (set) {
-		if (typeof set != 'OrderedSet') {
-			throw new NoAllowedArgumentError('union method only allows OrderedSet as argument.')
-		}
-
-		let difference = new OrderedSet();
-
-		for (let node in set) {
-			if (!this.contains(node.value)) {
-				return false;
-			}
+		if (!(set instanceof OrderedSet)) {
+			throw new NoAllowedArgumentError(EQUALS_METHOD_ARGUMENT_ERROR)
 		}
 
 		if (this.size() != set.size()) {
 			return false;
+		}
+
+		for (let node of set) {
+			if (!this.contains(node.value)) {
+				return false;
+			}
 		}
 
 		return true;
