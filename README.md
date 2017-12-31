@@ -12,7 +12,9 @@ Javascript developer pays little to none attention to the correct usage of Data 
  - [Stack](https://github.com/santiiiii/js-data-structures/tree/master/docs/Stack.md)
  - [Binary Search Tree](https://github.com/santiiiii/js-data-structures/tree/master/docs/BinarySearchTree.md)
 
+
  ### Usage Example ###
+ 
 
 ```
 
