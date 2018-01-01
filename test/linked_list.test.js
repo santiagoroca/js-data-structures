@@ -1,4 +1,4 @@
-const LinkedList = require('../index').LinkedList;
+const LinkedList = require('../index').list.LinkedList;
 
 test('Constructor should create an empty Linked List.', () => {
 	let list = new LinkedList();

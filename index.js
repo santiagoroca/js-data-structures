@@ -10,6 +10,7 @@ const Stack = require('./src/stack/Stack');
 
 //Trees
 const BinarySearchTree = require('./src/tree/BinarySearchTree');
+const AVL = require('./src/tree/AVL');
 
 //Sets
 const OrderedSet = require('./src/set/OrderedSet');
@@ -19,23 +20,30 @@ const NoAllowedArgumentError = require('./src/error/NoAllowedArgumentError');
 
 module.exports = {
 
-	//Queues
-	CircularBuffer: CircularBuffer,
-	PriorityQueue: PriorityQueue,
+	queue: {
+		CircularBuffer: CircularBuffer,
+		PriorityQueue: PriorityQueue
+	},
 
-	//Lists
-	LinkedList: LinkedList,
+	list: {
+		LinkedList: LinkedList
+	},
 
-	//Stacks
-	Stack: Stack,
+	stack: {
+		Stack: Stack
+	},
 
-	//Trees
-	BinarySearchTree: BinarySearchTree,
+	tree: {
+		BinarySearchTree: BinarySearchTree,	
+		AVL: AVL
+	},
 
-	//Sets
-	OrderedSet: OrderedSet,
+	set: {
+		OrderedSet: OrderedSet
+	},
 
-	//Erros
-	NoAllowedArgumentError: NoAllowedArgumentError
-	
+	error: {
+		NoAllowedArgumentError: NoAllowedArgumentError
+	}
+
 }

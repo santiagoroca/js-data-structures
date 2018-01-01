@@ -44,6 +44,6 @@ for (let node of binarySearchTree) {
 	console.log(node.value);
 }
 
-// OUPUT 1 2 3 3 3 4 6 7 9 15 19 20
+// OUPUT 1 2 3 4 6 7 9 15 19 20
 
 ```

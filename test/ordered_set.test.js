@@ -1,5 +1,5 @@
-const OrderedSet = require('../index').OrderedSet;
-const NoAllowedArgumentError = require('../index').NoAllowedArgumentError;
+const OrderedSet = require('../index').set.OrderedSet;
+const NoAllowedArgumentError = require('../index').error.NoAllowedArgumentError;
 
 const STATIC_VALUES_ARRAY = [
 	1, 4, 3, 6, 7, 2, 3, 9, 19, 20, 3, 15
