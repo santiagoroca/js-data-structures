@@ -22,7 +22,7 @@ for (let i = 0; i < 1000; i++) {
 	RAND_VALUES_ARRAY[i] = i;
 }
 
-/*test('Should create an empty AVL', () => {
+test('Should create an empty AVL', () => {
 	let avl = new AVL();
 	expect(avl.size()).toEqual(0);
 	expect(avl.empty()).toEqual(true);
@@ -294,20 +294,37 @@ test('Should remove on right subtree.', () => {
 	expect(avl.size()).toEqual(2);
 });
 
-test('Should insert and remove node LEFT LEFT.', () => {
+test('Should insert LEFT LEFT.', () => {
+    let avl = new AVL();
+    avl.insert(3);
+    avl.insert(2);
+    avl.insert(1);
+    expect(avl.size()).toEqual(3);
+});
+
+test('Should remove node LEFT LEFT.', () => {
 	let avl = new AVL();
 
 	avl.insert(2);
+    avl.insert(3);
 	avl.insert(1);
 	avl.insert(0);
+	expect(avl.size()).toEqual(4);
+	expect(avl.contains(3)).toEqual(true);
+	avl.remove(3);
+	expect(avl.contains(3)).toEqual(false);
 	expect(avl.size()).toEqual(3);
-	expect(avl.contains(1)).toEqual(true);
-	avl.remove(1);
-	expect(avl.contains(1)).toEqual(false);
-	expect(avl.size()).toEqual(2);
 });
-*/
-test('Should insert and remove node RIGHT RIGHT.', () => {
+
+test('Should insert RIGHT RIGHT.', () => {
+    let avl = new AVL();
+    avl.insert(1);
+    avl.insert(2);
+    avl.insert(3);
+    expect(avl.size()).toEqual(3);
+});
+
+test('Should remove node RIGHT RIGHT.', () => {
 	let avl = new AVL();
 
 	avl.insert(2);
@@ -315,18 +332,22 @@ test('Should insert and remove node RIGHT RIGHT.', () => {
 	avl.insert(1);
 	avl.insert(4);
 
-	for (let node of avl) {
-		console.log(node.value, node.left ? node.left.value : null, node.right ? node.right.value : null);
-	}
-
 	expect(avl.size()).toEqual(4);
 	expect(avl.contains(1)).toEqual(true);
 	avl.remove(1);
 	expect(avl.contains(1)).toEqual(false);
 	expect(avl.size()).toEqual(3);
 });
-/*
-test('Should insert and remove node LEFT RIGHT.', () => {
+
+test('Should insert LEFT RIGHT.', () => {
+    let avl = new AVL();
+    avl.insert(3);
+    avl.insert(1);
+    avl.insert(2);
+    expect(avl.size()).toEqual(3);
+});
+
+test('Should remove node LEFT RIGHT.', () => {
 	let avl = new AVL();
 
 	avl.insert(2);
@@ -340,16 +361,51 @@ test('Should insert and remove node LEFT RIGHT.', () => {
 	expect(avl.size()).toEqual(3);
 });
 
-test('Should insert and remove node RIGHT LEFT.', () => {
+test('Should insert RIGHT LEFT.', () => {
+    let avl = new AVL();
+    avl.insert(3);
+    avl.insert(4);
+    avl.insert(2);
+    expect(avl.size()).toEqual(3);
+});
+
+test('Should remove node RIGHT LEFT.', () => {
 	let avl = new AVL();
 
-	avl.insert(0);
-	avl.insert(2);
-	avl.insert(1);
+    avl.insert(1);
+    avl.insert(0);
+    avl.insert(3);
+    avl.insert(2);
+	expect(avl.size()).toEqual(4);
+	expect(avl.contains(0)).toEqual(true);
+	avl.remove(0);
+	expect(avl.contains(0)).toEqual(false);
 	expect(avl.size()).toEqual(3);
-	expect(avl.contains(1)).toEqual(true);
-	avl.remove(1);
-	expect(avl.contains(1)).toEqual(false);
-	expect(avl.size()).toEqual(2);
 });
-*/
+
+test('Should remove with both nodes set and use the min right value as new node.', () => {
+    let avl = new AVL();
+
+    avl.insert(1);
+    avl.insert(0);
+    avl.insert(3);
+    avl.insert(2);
+    expect(avl.size()).toEqual(4);
+    expect(avl.contains(1)).toEqual(true);
+    avl.remove(1);
+    expect(avl.contains(1)).toEqual(false);
+    expect(avl.size()).toEqual(3);
+});
+
+test('Should insert repeated set and have the correct size.', () => {
+    let avl = new AVL();
+
+    avl.insert(1);
+    avl.insert(0);
+    avl.insert(1);
+    avl.insert(0);
+    avl.insert(2);
+    avl.insert(3);
+
+    expect(avl.size()).toEqual(4);
+});

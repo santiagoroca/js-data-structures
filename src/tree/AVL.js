@@ -1,6 +1,6 @@
 const BinarySearchTree = require('../tree/BinarySearchTree');
 
-const findMin = (node, value) => {
+const findMin = (node) => {
 	let current = node;
 
 	while (current.left) {
@@ -36,15 +36,16 @@ const leftRotate = (node) => {
 	return right;
 }
 
-const insert = (node, element) => {
+const insert = (node, element, count) => {
 	if (!node) {
+	    count.count++;
 		return new Node(element);
 	}
 
 	if (element < node.value) {
-		node.left = insert(node.left, element);
+		node.left = insert(node.left, element, count);
 	} else if (element > node.value) {
-		node.right = insert(node.right, element);
+		node.right = insert(node.right, element, count);
 	} else {
 		return node;
 	}
@@ -104,36 +105,30 @@ const remove = (node, element, count) => {
 		node.right = remove(node.right, node.value);
 	}
 
-	if (!node) {
-		return null;
-	}
-
 	//Recalculate Height
 	node.isDirty();
 
 	//Get balance factor
 	const balanceFactor = node.balanceFactor();
 
-	console.log(node.value, element,  balanceFactor);
-
 	//LEFT LEFT
-	if (balanceFactor > 1 && node.left.getBalanceFactor() >= 0) {
+	if (balanceFactor > 1 && node.left.balanceFactor() >= 0) {
 		return rightRotate(node);
 	}
 	
 	//LEFT RIGHT
-	if (balanceFactor > 1 && node.left.getBalanceFactor() <= 0) {
+	if (balanceFactor > 1 && node.left.balanceFactor() < 0) {
 		node.left = leftRotate(node.left);
 		return rightRotate(node);
 	}
 
 	//RIGHT RIGHT
-	if (balanceFactor < -1 && node.right.getBalanceFactor() < 0) {
+	if (balanceFactor < -1 && node.right.balanceFactor() <= 0) {
 		return leftRotate(node);
 	}
 	
 	//RIGHT LEFT
-	if (balanceFactor < -1 && node.right.getBalanceFactor() > 0) {
+	if (balanceFactor < -1 && node.right.balanceFactor() > 0) {
 		node.right = rightRotate(node.right);
 		return leftRotate(node);
 	}
@@ -149,7 +144,6 @@ class Node {
 		this.right = right;
 		this._height = false;
 		this._balanceFactor = false;
-		this.dirty = true;
 	}
 
 	isDirty () {
@@ -178,8 +172,12 @@ class Node {
 class AVL extends BinarySearchTree {
 
 	insert (element) {
-		this.count++;
-		this.root = insert(this.root, element);
+        let count = {
+            count: this.count
+        };
+
+		this.root = insert(this.root, element, count);
+        this.count = count.count;
 	}
 
 	remove (element) {

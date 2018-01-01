@@ -1,4 +1,4 @@
-const BinarySearchTree = require('../tree/BinarySearchTree');
+const AVL = require('../tree/AVL');
 const NoAllowedArgumentError = require('../error/NoAllowedArgumentError');
 
 //Constants
@@ -7,7 +7,7 @@ const INTERSECTION_METHOD_ARGUMENT_ERROR = 'intersection method only allows Orde
 const DIFERENCE_METHOD_ARGUMENT_ERROR = 'diference method only allows OrderedSet as argument.';
 const EQUALS_METHOD_ARGUMENT_ERROR = 'equals method only allows OrderedSet as argument.';
 
-class OrderedSet extends BinarySearchTree {
+class OrderedSet extends AVL {
 
 	constructor(elements = []) {
 		super();
@@ -15,12 +15,6 @@ class OrderedSet extends BinarySearchTree {
 		const elsLength = elements.length;
 		for (let i = 0; i < elsLength; i++) {
 			this.insert(elements[i]);
-		}
-	}
-
-	insert (element) {
-		if (!this.find(element)) {
-			super.insert(element);
 		}
 	}
 
@@ -78,8 +72,6 @@ class OrderedSet extends BinarySearchTree {
 	}
 
 	subset (set) {
-		let difference = new OrderedSet();
-
 		if (this.size() < set.size()) {
 			return false;
 		}		
