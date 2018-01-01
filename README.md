@@ -11,6 +11,7 @@ Javascript developer pays little to none attention to the correct usage of Data 
  - [Linked List](https://github.com/santiiiii/js-data-structures/tree/master/docs/LinkedList.md)
  - [Stack](https://github.com/santiiiii/js-data-structures/tree/master/docs/Stack.md)
  - [Binary Search Tree](https://github.com/santiiiii/js-data-structures/tree/master/docs/BinarySearchTree.md)
+ - [AVL](https://github.com/santiiiii/js-data-structures/tree/master/docs/AVL.md)
  - [Ordered Set](https://github.com/santiiiii/js-data-structures/tree/master/docs/OrderedSet.md)
 
 ### Usage Example ###
@@ -44,6 +45,6 @@ for (let node of binarySearchTree) {
 	console.log(node.value);
 }
 
-// OUPUT 1 2 3 3 3 4 6 7 9 15 19 20
+// OUPUT 1 2 3 4 6 7 9 15 19 20
 
 ```

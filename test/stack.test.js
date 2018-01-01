@@ -1,4 +1,4 @@
-const Stack = require('../index').Stack;
+const Stack = require('../index').stack.Stack;
 
 test('Constructor should create an empty Stack.', () => {
 	let stack = new Stack();

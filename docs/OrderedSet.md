@@ -1,6 +1,6 @@
 ## JStandard.OrderedSet
 
-Ordered Set contains the most commons set functions implemented on top of a BST but not allowing duplicated keys. Ordered Set can be ibeterated only in Inorder to achieve its Ordered State. 
+Ordered Set contains the most commons set functions implemented on top of a AVL which doesn't allow duplicated keys. Ordered Set can be ibeterated only in Inorder to achieve its Ordered State.
 
 Ordered Set is under a lot of improvement process that will be released soon in the future. The usage interface wont change so you wont be affected in your projects in future releases. 
 

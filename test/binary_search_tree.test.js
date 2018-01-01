@@ -1,4 +1,4 @@
-const BinarySearchTree = require('../index').BinarySearchTree;
+const BinarySearchTree = require('../index').tree.BinarySearchTree;
 
 const STATIC_VALUES_ARRAY = [
 	1, 4, 3, 6, 7, 2, 3, 9, 19, 20, 3, 15

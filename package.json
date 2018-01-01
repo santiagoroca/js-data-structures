@@ -1,6 +1,6 @@
 {
   "name": "jstandard",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Common data structures implementation for javascript",
   "main": "index.js",
   "repository": {
@@ -11,7 +11,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "jest --coverage --verbose"
+    "test": "jest --coverage"
   },
   "keywords": [
     "javascript",

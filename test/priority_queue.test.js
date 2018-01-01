@@ -1,4 +1,4 @@
-const PriorityQueue = require('../index').PriorityQueue;
+const PriorityQueue = require('../index').queue.PriorityQueue;
 
 test('Should PUSH 100 register and have size 100.', () => {
 	let queue = new PriorityQueue();
