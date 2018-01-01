@@ -55,8 +55,6 @@ const insert = (node, element) => {
 	//Get balance factor
 	const balanceFactor = node.balanceFactor();
 
-	console.log(node.value, node.balanceFactor);
-
 	//LEFT LEFT
 	if (balanceFactor > 1 && element < node.left.value) {
 		return rightRotate(node);
@@ -116,24 +114,26 @@ const remove = (node, element, count) => {
 	//Get balance factor
 	const balanceFactor = node.balanceFactor();
 
+	console.log(node.value, element,  balanceFactor);
+
 	//LEFT LEFT
-	if (balanceFactor > 1 && element < node.left.value) {
+	if (balanceFactor > 1 && node.left.getBalanceFactor() >= 0) {
 		return rightRotate(node);
 	}
 	
-	//RIGHT RIGHT
-	if (balanceFactor < -1 && element > node.right.value) {
-		return leftRotate(node);
-	}
-	
 	//LEFT RIGHT
-	if (balanceFactor > 1 && element > node.left.value) {
+	if (balanceFactor > 1 && node.left.getBalanceFactor() <= 0) {
 		node.left = leftRotate(node.left);
 		return rightRotate(node);
 	}
 
+	//RIGHT RIGHT
+	if (balanceFactor < -1 && node.right.getBalanceFactor() < 0) {
+		return leftRotate(node);
+	}
+	
 	//RIGHT LEFT
-	if (balanceFactor < -1 && element < node.right.value) {
+	if (balanceFactor < -1 && node.right.getBalanceFactor() > 0) {
 		node.right = rightRotate(node.right);
 		return leftRotate(node);
 	}
@@ -147,25 +147,30 @@ class Node {
 		this.value = value;
 		this.left = left;
 		this.right = right;
-		this._height = 0;
+		this._height = false;
+		this._balanceFactor = false;
 		this.dirty = true;
 	}
 
 	isDirty () {
-		this.dirty = true;
+		this._height = false;
+		this._balanceFactor = false;
 	}
 
 	height () {
-		if (this.dirty) {
+		if (!this._height) {
 			this._height = 1 + Math.max(this.left ? this.left.height() : 0, this.right ? this.right.height() : 0);
-			this.dirty = false;
 		}
 
 		return this._height;
 	}
 
 	balanceFactor () {
-		return this.left ? this.left.height() : 0 - this.right ? this.right.height() : 0;
+		if (!this._balanceFactor) {
+			this._balanceFactor = (this.left ? this.left.height() : 0) - (this.right ? this.right.height() : 0);
+		}
+
+		return this._balanceFactor;
 	}
 
 }
