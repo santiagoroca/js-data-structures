@@ -33,7 +33,9 @@
     "search",
     "tree",
     "ordered",
-    "set"
+    "set",
+    "avl",
+    "unordered"
   ],
   "author": "Santiago Roca",
   "license": "ISC",
