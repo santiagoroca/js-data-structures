@@ -72,7 +72,7 @@ test('Should join two equal Ordered Sets into one.', () => {
 	expect(join.empty()).toEqual(false);
 });
 
-test('Should throw NoAllowedArgumentError with non OrderedUnion argument.', () => {
+test('Should throw NoAllowedArgumentError with non OrderedSet argument.', () => {
 	const A = new OrderedSet([1, 2, 3, 4, 5, 6]);
 	expect(() => A.union([1, 3, 4, 6, 1])).toThrow(NoAllowedArgumentError);
 });
@@ -112,7 +112,7 @@ test('Should get the intersection of two equal Ordered Sets into one.', () => {
 	expect(join.empty()).toEqual(false);
 });
 
-test('Should throw NoAllowedArgumentError with non OrderedUnion argument.', () => {
+test('Should throw NoAllowedArgumentError with non OrderedSet argument.', () => {
 	const A = new OrderedSet([1, 2, 3, 4, 5, 6]);
 	expect(() => A.intersection([1, 3, 4, 6, 1])).toThrow(NoAllowedArgumentError);
 });
@@ -152,7 +152,7 @@ test('Should get the difference of two equal Ordered Sets into one.', () => {
 	expect(join.empty()).toEqual(true);
 });
 
-test('Should throw NoAllowedArgumentError with non OrderedUnion argument.', () => {
+test('Should throw NoAllowedArgumentError with non OrderedSet argument.', () => {
 	const A = new OrderedSet([1, 2, 3, 4, 5, 6]);
 	expect(() => A.difference([1, 3, 4, 6, 1])).toThrow(NoAllowedArgumentError);
 });
@@ -199,7 +199,7 @@ test('Should not equal empty set.', () => {
 	expect(A.equals(B)).toEqual(false);
 });
 
-test('Should throw NoAllowedArgumentError with non OrderedUnion argument.', () => {
+test('Should throw NoAllowedArgumentError with non OrderedSet argument.', () => {
 	const A = new OrderedSet([1, 2, 3, 4, 5, 6]);
 	expect(() => A.equals([1, 3, 4, 6, 1])).toThrow(NoAllowedArgumentError);
 });
@@ -232,6 +232,11 @@ test('Should not B be subset of A with a empty set.', () => {
 	expect(A.equals(B)).toEqual(false);
 });
 
+test('Should throw NoAllowedArgumentError with non OrderedSet argument.', () => {
+    const A = new OrderedSet([1, 2, 3, 4, 5, 6]);
+    expect(() => A.subset([1, 3, 4, 6, 1])).toThrow(NoAllowedArgumentError);
+});
+
 test('Should not B be subset of A empty set.', () => {
 	const A = new OrderedSet();
 	const B = new OrderedSet([4, 5, 6, 2, 3, 1]);
@@ -239,7 +244,7 @@ test('Should not B be subset of A empty set.', () => {
 	expect(A.equals(B)).toEqual(false);
 });
 
-test('Should throw NoAllowedArgumentError with non OrderedUnion argument.', () => {
+test('Should throw NoAllowedArgumentError with non OrderedSet argument.', () => {
 	const A = new OrderedSet([1, 2, 3, 4, 5, 6]);
 	expect(() => A.equals([1, 3, 4, 6, 1])).toThrow(NoAllowedArgumentError);
 });

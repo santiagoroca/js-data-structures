@@ -5,6 +5,7 @@ const NoAllowedArgumentError = require('../error/NoAllowedArgumentError');
 const UNION_METHOD_ARGUMENT_ERROR = 'union method only allows OrderedSet as argument.';
 const INTERSECTION_METHOD_ARGUMENT_ERROR = 'intersection method only allows OrderedSet as argument.';
 const DIFERENCE_METHOD_ARGUMENT_ERROR = 'diference method only allows OrderedSet as argument.';
+const SUBSET_METHOD_ARGUMENT_ERROR = 'subset method only allows OrderedSet as argument.';
 const EQUALS_METHOD_ARGUMENT_ERROR = 'equals method only allows OrderedSet as argument.';
 
 class OrderedSet extends AVL {
@@ -72,6 +73,10 @@ class OrderedSet extends AVL {
 	}
 
 	subset (set) {
+        if (!(set instanceof OrderedSet)) {
+            throw new NoAllowedArgumentError(SUBSET_METHOD_ARGUMENT_ERROR)
+        }
+
 		if (this.size() < set.size()) {
 			return false;
 		}		
