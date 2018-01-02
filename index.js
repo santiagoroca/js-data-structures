@@ -14,6 +14,7 @@ const AVL = require('./src/tree/AVL');
 
 //Sets
 const OrderedSet = require('./src/set/OrderedSet');
+const UnorderedSet = require('./src/set/UnorderedSet');
 
 //Errors
 const NoAllowedArgumentError = require('./src/error/NoAllowedArgumentError');
@@ -39,7 +40,8 @@ module.exports = {
 	},
 
 	set: {
-		OrderedSet: OrderedSet
+		OrderedSet: OrderedSet,
+        UnorderedSet: UnorderedSet
 	},
 
 	error: {

@@ -1,4 +1,5 @@
-## JStandard [![Build Status](https://travis-ci.org/santiiiii/js-data-structures.svg?branch=master)](https://travis-ci.org/santiiiii/js-data-structures) [![Maintainability](https://api.codeclimate.com/v1/badges/60fe99c09bec5d44c070/maintainability)](https://codeclimate.com/github/santiiiii/js-data-structures/maintainability) [![codecov](https://codecov.io/gh/santiiiii/js-data-structures/branch/master/graph/badge.svg)](https://codecov.io/gh/santiiiii/js-data-structures) [![Inline docs](http://inch-ci.org/github/santiiiii/js-data-structures.svg?branch=master)](http://inch-ci.org/github/santiiiii/js-data-structures)
+## JStandard [![Build Status](https://travis-ci.org/santiiiii/js-data-structures.svg?branch=master)](https://travis-ci.org/santiiiii/js-data-structures) [![Maintainability](https://api.codeclimate.com/v1/badges/60fe99c09bec5d44c070/maintainability)](https://codeclimate.com/github/santiiiii/js-data-structures/maintainability) [![codecov](https://codecov.io/gh/santiiiii/js-data-structures/branch/master/graph/badge.svg)](https://codecov.io/gh/santiiiii/js-data-structures) [![Inline docs](http://inch-ci.org/github/santiiiii/js-data-structures.svg?branch=master)](http://inch-ci.org/github/santiiiii/js-data-structures) [![HitCount](http://hits.dwyl.com/santiiiii/js-data-structures.svg)](http://hits.dwyl.com/santiiiii/js-data-structures)
+
 
 JStandard offers standard data structures for javascript, paying attention to performance and developer-friendly usage. 
 
@@ -13,6 +14,7 @@ Javascript developer pays little to none attention to the correct usage of Data 
  - [Binary Search Tree](https://github.com/santiiiii/js-data-structures/tree/master/docs/BinarySearchTree.md)
  - [AVL](https://github.com/santiiiii/js-data-structures/tree/master/docs/AVL.md)
  - [Ordered Set](https://github.com/santiiiii/js-data-structures/tree/master/docs/OrderedSet.md)
+ - [Unordered Set](https://github.com/santiiiii/js-data-structures/tree/master/docs/UnorderedSet.md)
 
 ### Usage Example ###
  
