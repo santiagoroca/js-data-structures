@@ -7,6 +7,19 @@ class Node {
 		this.value = value;
 		this.left = left;
 		this.right = right;
+		this._size = false;	
+	}
+
+	isDirty () {
+		this._size = false;
+	}
+
+	size () {
+		if (!this._size) {
+			this._size = (1 + (this.left ? this.left.size() : 0) + (this.right ? this.right.size() : 0));
+		}
+
+		return this._size;
 	}
 
 }
@@ -130,6 +143,9 @@ class BinarySearchTree {
 		} else {
 			node.right = this._insert(node.right, element);
 		}
+
+		//Let know node that should update height if it need to be used
+		node.isDirty();
 
 		return node;
 	}

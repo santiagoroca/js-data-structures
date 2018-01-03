@@ -1,10 +1,10 @@
 language: node_js
 node_js:
-- '7'
+  - '7'
 before_install:
-- pip install --user codecov
+  - pip install --user codecov
 after_success:
-- codecov --file coverage/lcov.info --disable search
+  - codecov --file coverage/lcov.info --disable search
 deploy:
   provider: npm
   email: snroca@hotmail.com

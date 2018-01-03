@@ -144,11 +144,13 @@ class Node {
 		this.right = right;
 		this._height = false;
 		this._balanceFactor = false;
+		this._size = false;
 	}
 
 	isDirty () {
 		this._height = false;
 		this._balanceFactor = false;
+		this._size = false;
 	}
 
 	height () {
