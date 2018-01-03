@@ -47,6 +47,23 @@ AVL Tree implementation on top of JStandard.BinarySearchTree. It only differs fr
 
 ----------
 
+### Performance Samples  ###
+
+- 1.000.000 Random 'insert' in range 1 - 100.000 (0.0017402028170000001ms)
+- 1.000.000 Random 'find' in range 1 - 100.000 (0.000855810903ms)
+- 1.000.000 Random 'contains' in range 1 - 100.000 (0.000869182852ms)
+- 1.000.000 Random 'contains' in range 1 - 100.000 (0.000932622613ms)
+- 1.000.000 'min' executions (0.000124294413ms)
+- 1.000.000 'max' executions (0.000119263085ms)
+- 1.000.000 'size' executions (0.000068458712ms)
+- 1.000.000 'empty' executions (0.00006713704300000001ms)
+- 2 'INORDER Iterations' executions (961.769453ms)
+- 2 'PREORDER Iterations' executions (738.963003ms)
+- 2 'POSTORDER Iterations' executions (844.0840935ms)
+- 2 'LEVELORDER Iterations' executions (9.555036ms)
+
+----------
+
 ### Iteration Example ###
 
 ```

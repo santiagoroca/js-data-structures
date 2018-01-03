@@ -47,6 +47,23 @@ Basic Binary Search tree implementation supporting insert, remove, min, max, and
 
 ----------
 
+### Performance Samples  ###
+
+- 1.000.000 Random 'insert' in range 1 - 100.000 (0.001287228727ms)
+- 1.000.000 Random 'find' in range 1 - 100.000 (0.001023060836ms)
+- 1.000.000 Random 'contains' in range 1 - 100.000 (9540.0009541897559999999ms)
+- 1.000.000 Random 'contains' in range 1 - 100.000 (961.918222s - 0.0009619182220000001ms)
+- 1.000.000 'min' executions (0.000083427698ms)
+- 1.000.000 'max' executions (0.000109678907ms)
+- 1.000.000 'size' executions (0.000062962207ms)
+- 1.000.000 'empty' executions (0.000063408442ms)
+- 2 'INORDER Iterations' executions (728.125852ms)
+- 2 'PREORDER Iterations' executions (849.898217ms)
+- 2 'POSTORDER Iterations' executions (178.3478065ms)
+- 2 'LEVELORDER Iterations' executions (37.836498ms)
+
+----------
+
 ### Iteration Example ###
 
 ```
