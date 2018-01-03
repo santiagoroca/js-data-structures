@@ -212,6 +212,54 @@ test('Should insert 12 Nodes and iterate level-order on empty list.', () => {
 	expect(iterations).toEqual(0);
 });
 
+test('Should insert 12 Nodes and iterate level-order on empty list.', () => {
+	let bst = new BinarySearchTree();
+
+	bst.setIterationMode(BinarySearchTree.LEVELORDER);
+
+	let iterations = 0;
+	for (let node of bst) {
+		iterations++;
+	}
+
+	expect(iterations).toEqual(0);
+});
+
+test('Should insert 12 Nodes and iterate inorder-order on empty list.', () => {
+	let bst = new BinarySearchTree();
+
+	let iterations = 0;
+	for (let node of bst) {
+		iterations++;
+	}
+
+	expect(iterations).toEqual(0);
+});
+
+test('Should insert 12 Nodes and iterate pre-order on empty list.', () => {
+	let bst = new BinarySearchTree();
+	bst.setIterationMode(BinarySearchTree.PREORDER);
+
+	let iterations = 0;
+	for (let node of bst) {
+		iterations++;
+	}
+
+	expect(iterations).toEqual(0);
+});
+
+test('Should insert 12 Nodes and iterate pre-order on empty list.', () => {
+	let bst = new BinarySearchTree();
+	bst.setIterationMode(BinarySearchTree.POSTORDER);
+
+	let iterations = 0;
+	for (let node of bst) {
+		iterations++;
+	}
+
+	expect(iterations).toEqual(0);
+});
+
 test('Should clear the whole tree.', () => {
 	let bst = new BinarySearchTree();
 
