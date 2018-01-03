@@ -344,3 +344,23 @@ test('Should remove on right subtree.', () => {
 	expect(bst.contains(1)).toEqual(false);
 	expect(bst.size()).toEqual(2);
 });
+
+test('Should get the size of a Node.', () => {
+	let bst = new BinarySearchTree();
+	bst.insert(0);
+	expect(bst.min().size()).toEqual(1);
+});
+
+test('Should get the size of a Node with only left.', () => {
+	let bst = new BinarySearchTree();
+	bst.insert(1);
+	bst.insert(0);
+	expect(bst.max().size()).toEqual(2);
+});
+
+test('Should get the size of a Node with only right.', () => {
+	let bst = new BinarySearchTree();
+	bst.insert(0);
+	bst.insert(1);
+	expect(bst.min().size()).toEqual(2);
+});
