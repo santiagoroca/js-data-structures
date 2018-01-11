@@ -1,6 +1,6 @@
 {
   "name": "jstandard",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Common data structures implementation for javascript",
   "main": "index.js",
   "repository": {
@@ -40,7 +40,9 @@
   "author": "Santiago Roca",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^22.0.4"
+    "babel-loader": "^7.1.2",
+    "jest": "^22.0.4",
+    "webpack": "^3.10.0"
   },
   "jest": {
     "collectCoverage": true
