@@ -27,7 +27,7 @@ import { BinarySearchTree } from 'jstandard';
 const binarySearchTree = new BinarySearchTree();
 
 //Set iteration mode to desired mode
-binarySearchTree.setIterationMode(binarySearchTree.INORDER);
+binarySearchTree.setIterationMode(BinarySearchTree.INORDER);
 
 //Insert random values
 binarySearchTree.insert(1); 
@@ -48,6 +48,40 @@ for (let node of binarySearchTree) {
 	console.log(node.value);
 }
 
-// OUPUT 1 2 3 4 6 7 9 15 19 20
+// OUPUT 1 2 3 3 3 4 6 7 9 15 19 20
 
+```
+
+### Usage Example ###
+
+```
+<script src="node_modules/jstandard/build/jstandard.js"></script>
+<script>
+    //Create a new Binary Search Tree
+    const binarySearchTree = new JStandard.BinarySearchTree();
+
+    //Set iteration mode to desired mode
+    binarySearchTree.setIterationMode(JStandard.BinarySearchTree.INORDER);
+
+    //Insert random values
+    binarySearchTree.insert(1);
+    binarySearchTree.insert(4);
+    binarySearchTree.insert(3);
+    binarySearchTree.insert(6);
+    binarySearchTree.insert(7);
+    binarySearchTree.insert(2);
+    binarySearchTree.insert(3);
+    binarySearchTree.insert(9);
+    binarySearchTree.insert(19);
+    binarySearchTree.insert(20);
+    binarySearchTree.insert(3);
+    binarySearchTree.insert(15);
+
+    //Iterate natively
+    for (let node of binarySearchTree) {
+    	console.log(node.value);
+    }
+
+    // OUPUT 1 2 3 3 3 4 6 7 9 15 19 20
+</script>
 ```

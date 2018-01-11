@@ -3,6 +3,8 @@ node_js:
   - '7'
 before_install:
   - pip install --user codecov
+after_install:
+  - webpack
 after_success:
   - codecov --file coverage/lcov.info --disable search
 deploy:
