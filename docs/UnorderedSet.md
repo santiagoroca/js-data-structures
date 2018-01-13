@@ -1,4 +1,4 @@
-## JStandard.UnorderedSet
+## JStandard.set.UnorderedSet
 
 Unordered Set is implemented on top of a Native Set Object. It adds operations for finding the difference between two sets, the intersection, union, subset and equality.
 

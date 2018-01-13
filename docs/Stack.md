@@ -1,4 +1,4 @@
-## JStandard.Stack
+## JStandard.stack.Stack
 
 Stack Implementation on top of a unidirectional linked list.
 

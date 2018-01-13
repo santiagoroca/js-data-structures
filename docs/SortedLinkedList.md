@@ -1,4 +1,4 @@
-## JStandard.SortedLinkedList
+## JStandard.list.SortedLinkedList
 
 Sorted Linked List is built on top of a Binary Search Tree to allow common operations in a faster manner.
 

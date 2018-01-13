@@ -1,4 +1,4 @@
-## JStandard.LinkedList
+## JStandard.list.LinkedList
 
 Linked List Implementation for simple or complex operations.
 

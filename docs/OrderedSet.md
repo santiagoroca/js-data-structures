@@ -1,4 +1,4 @@
-## JStandard.OrderedSet
+## JStandard.set.OrderedSet
 
 Ordered Set contains the most commons set functions implemented on top of a AVL which doesn't allow duplicated keys. Ordered Set can be ibeterated only in Inorder to achieve its Ordered State.
 

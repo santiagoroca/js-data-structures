@@ -1,4 +1,4 @@
-## JStandard.AVL
+## JStandard.tree.AVL
 
 AVL Tree implementation on top of JStandard.BinarySearchTree. It only differs from the BinarySearch tree in the insert and remove methods which are extended to perform the tree self-balancing operations.
 
