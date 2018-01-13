@@ -1,4 +1,4 @@
-## JStandard.PriorityQueue
+## JStandard-queue.PriorityQueue
 
 Priority Queue implementation with Heaps that allow MIN/MAX and custom comparators for more complex objects. 
 ----------

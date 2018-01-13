@@ -8,6 +8,7 @@ Javascript developer pays little to none attention to the correct usage of Data 
 ### Structures Available ###
 
  - [Circular Buffer](https://github.com/santiiiii/js-data-structures/tree/master/docs/CircularBuffer.md)
+ - [Queue](https://github.com/santiiiii/js-data-structures/tree/master/docs/Queue.md)
  - [Priority Queue](https://github.com/santiiiii/js-data-structures/tree/master/docs/PriorityQueue.md)
  - [Linked List](https://github.com/santiiiii/js-data-structures/tree/master/docs/LinkedList.md)
  - [Sorted Linked List](https://github.com/santiiiii/js-data-structures/tree/master/docs/SortedLinkedList.md)

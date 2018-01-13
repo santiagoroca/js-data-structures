@@ -1,4 +1,4 @@
-## JStandard.BinarySearchTree
+## JStandard.tree.BinarySearchTree
 
 Basic Binary Search tree implementation supporting insert, remove, min, max, and preorder, inorder, postorder and levelorder traversal.
 
