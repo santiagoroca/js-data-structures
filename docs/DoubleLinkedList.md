@@ -1,6 +1,6 @@
-## JStandard.list.LinkedList
+## JStandard.list.DoubleLinkedList
 
-Linked List Implementation for simple or complex operations.
+Double linked list implementation suitable for double ended queues.
 
 ----------
 
@@ -8,17 +8,23 @@ Linked List Implementation for simple or complex operations.
 
 **constructor()** 
 
-    const LinkedList = new LinkedList();
+    const DoubleLinkedList = new DoubleLinkedList();
 
 ----------
 
 ### Methods ###
 
+**insert(element)** (void) Adds a new value to the begining of the list.
+
+- element: Any type of element
+
 **push(element)** (void) Adds a new value to the end of the list.
 
 - element: Any type of element
 
-**pop()** (void) Pops the element in the front of the list.
+**remove()** (void) Removes the element in the front of the list.
+
+**pop()** (void) Pops the element in the end of the list.
 
 **insertAt(index, Element)** (void) Adds an element in the provided position or the end of the list if it overflows its size.
 
@@ -31,6 +37,8 @@ Linked List Implementation for simple or complex operations.
 - index: Number
 
 **peek()** (Node) Returns the element at the front of the List or null if empty.
+
+**peekLast()** (Node) Returns the element at the end of the List or null if empty.
 
 **empty()** (boolean) Returns true if List is empty otherwise false.
 
@@ -54,27 +62,31 @@ Linked List Implementation for simple or complex operations.
 
 **clear()** (void) Clears the list
 
+**setIterationMode(mode)** (void) Set the iterator mode for native iterations.
+
+- mode: DoubleLinkedList.FORWARD (default), DoubleLinkedList.BACKWARD
+
 ### Iteration Example ###
 
 ```
-const linkedList = new LinkedList();
+const doubleLinkedList = new DoubleLinkedList();
 
 //Insert random values
-linkedList.insert(1); 
-linkedList.insert(4); 
-linkedList.insert(3); 
-linkedList.insert(6); 
-linkedList.insert(7);
-linkedList.insert(2); 
-linkedList.insert(3); 
-linkedList.insert(9); 
-linkedList.insert(19); 
-linkedList.insert(20); 
-linkedList.insert(3); 
-linkedList.insert(15);
+doubleLinkedList.insert(1); 
+doubleLinkedList.insert(4); 
+doubleLinkedList.insert(3); 
+doubleLinkedList.insert(6); 
+doubleLinkedList.insert(7);
+doubleLinkedList.insert(2); 
+doubleLinkedList.insert(3); 
+doubleLinkedList.insert(9); 
+doubleLinkedList.insert(19); 
+doubleLinkedList.insert(20); 
+doubleLinkedList.insert(3); 
+doubleLinkedList.insert(15);
 
 //Iterate natively
-for (let node of linkedList) {
+for (let node of doubleLinkedList) {
 	console.log(node.value);
 }
 

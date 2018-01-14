@@ -12,6 +12,7 @@ Javascript developer pays little to none attention to the correct usage of Data 
  - [Priority Queue](https://github.com/santiiiii/js-data-structures/tree/master/docs/PriorityQueue.md)
  - [Linked List](https://github.com/santiiiii/js-data-structures/tree/master/docs/LinkedList.md)
  - [Sorted Linked List](https://github.com/santiiiii/js-data-structures/tree/master/docs/SortedLinkedList.md)
+ - [Double Linked List](https://github.com/santiiiii/js-data-structures/tree/master/docs/DoubleLinkedList.md)
  - [Stack](https://github.com/santiiiii/js-data-structures/tree/master/docs/Stack.md)
  - [Binary Search Tree](https://github.com/santiiiii/js-data-structures/tree/master/docs/BinarySearchTree.md)
  - [AVL](https://github.com/santiiiii/js-data-structures/tree/master/docs/AVL.md)
