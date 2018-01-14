@@ -6,6 +6,7 @@ const PriorityQueue = require('./src/queue/PriorityQueue');
 //Lists
 const LinkedList = require('./src/list/LinkedList');
 const SortedLinkedList = require('./src/list/SortedLinkedList');
+const DoubleLinkedList = require('./src/list/DoubleLinkedList');
 
 //Stacks
 const Stack = require('./src/stack/Stack');
@@ -31,7 +32,8 @@ module.exports = {
 
 	list: {
 		LinkedList: LinkedList,
-		SortedLinkedList: SortedLinkedList
+		SortedLinkedList: SortedLinkedList,
+		DoubleLinkedList: DoubleLinkedList
 	},
 
 	stack: {

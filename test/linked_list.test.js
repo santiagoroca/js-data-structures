@@ -29,7 +29,7 @@ test('Should pop 50 elements from the list.', () => {
 	}
 });
 
-test('Should insert element at position 20 in a 50 length queue.', () => {
+test('Should insert element at position 20 in a 50 length list.', () => {
 	let list = new LinkedList();
 
 	for (let i = 0; i < 50; i++) {
@@ -47,7 +47,7 @@ test('Should insert element at position 20 in a 50 length queue.', () => {
 	expect(current.value).toEqual(1);
 });
 
-test('Should insert element at position 55 in a 50 length queue.', () => {
+test('Should insert element at position 55 in a 50 length list.', () => {
 	let list = new LinkedList();
 
 	for (let i = 0; i < 50; i++) {
@@ -66,14 +66,14 @@ test('Should insert element at position 55 in a 50 length queue.', () => {
 });
 
 
-test('Should insert element at position 10 in a 0 length queue.', () => {
+test('Should insert element at position 10 in a 0 length list.', () => {
 	let list = new LinkedList();
 
 	list.insertAt(10, 1);
 	expect(list.peek().value).toEqual(1);
 });
 
-test('Should remove element at position 10 in a 20 length queue.', () => {
+test('Should remove element at position 10 in a 20 length list.', () => {
 	let list = new LinkedList();
 
 	for (let i = 0; i < 20; i++) {
@@ -90,7 +90,7 @@ test('Should remove element at position 10 in a 20 length queue.', () => {
 	expect(current.value).toEqual(0);
 });
 
-test('Should not remove element at position 10 in a 5 length queue.', () => {
+test('Should not remove element at position 10 in a 5 length list.', () => {
 	let list = new LinkedList();
 
 	for (let i = 0; i < 5; i++) {
@@ -278,3 +278,18 @@ test('Should not return an error when pop called on a empty list.', () => {
 	let list = new LinkedList();
 	list.pop();
 });
+
+test('Should iterate list of 50 elmements.', () => {
+	let list = new LinkedList();
+
+	let i = 0;
+	for (; i < 50; i++) {
+		list.push(i);
+	}
+
+	//Iterate natively
+	for (let node of list) {
+	    expect(node.value).toEqual(--i);
+	}	
+});
+
