@@ -8,9 +8,11 @@ Javascript developer pays little to none attention to the correct usage of Data 
 ### Structures Available ###
 
  - [Circular Buffer](https://github.com/santiiiii/js-data-structures/tree/master/docs/CircularBuffer.md)
+ - [Queue](https://github.com/santiiiii/js-data-structures/tree/master/docs/Queue.md)
  - [Priority Queue](https://github.com/santiiiii/js-data-structures/tree/master/docs/PriorityQueue.md)
  - [Linked List](https://github.com/santiiiii/js-data-structures/tree/master/docs/LinkedList.md)
  - [Sorted Linked List](https://github.com/santiiiii/js-data-structures/tree/master/docs/SortedLinkedList.md)
+ - [Double Linked List](https://github.com/santiiiii/js-data-structures/tree/master/docs/DoubleLinkedList.md)
  - [Stack](https://github.com/santiiiii/js-data-structures/tree/master/docs/Stack.md)
  - [Binary Search Tree](https://github.com/santiiiii/js-data-structures/tree/master/docs/BinarySearchTree.md)
  - [AVL](https://github.com/santiiiii/js-data-structures/tree/master/docs/AVL.md)
@@ -21,13 +23,13 @@ Javascript developer pays little to none attention to the correct usage of Data 
  
 ```
 
-import { BinarySearchTree } from 'jstandard';
+import { tree } from 'jstandard';
 
 //Create a new Binary Search Tree
-const binarySearchTree = new BinarySearchTree();
+const binarySearchTree = new tree.BinarySearchTree();
 
 //Set iteration mode to desired mode
-binarySearchTree.setIterationMode(BinarySearchTree.INORDER);
+binarySearchTree.setIterationMode(tree.BinarySearchTree.INORDER);
 
 //Insert random values
 binarySearchTree.insert(1); 
@@ -58,10 +60,10 @@ for (let node of binarySearchTree) {
 <script src="node_modules/jstandard/build/jstandard.js"></script>
 <script>
     //Create a new Binary Search Tree
-    const binarySearchTree = new JStandard.BinarySearchTree();
+    const binarySearchTree = new JStandard.tree.BinarySearchTree();
 
     //Set iteration mode to desired mode
-    binarySearchTree.setIterationMode(JStandard.BinarySearchTree.INORDER);
+    binarySearchTree.setIterationMode(JStandard.tree.BinarySearchTree.INORDER);
 
     //Insert random values
     binarySearchTree.insert(1);

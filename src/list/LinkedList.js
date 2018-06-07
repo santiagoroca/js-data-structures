@@ -67,7 +67,7 @@ class LinkedList {
 			current = current.next;
 		}
 
-		if (index == 0 && current != this.tail) {
+		if (index == 0) {
 			current.next = current.next.next;
 		}
 	}
@@ -141,7 +141,15 @@ class LinkedList {
 	clear () {
 		this.count = 0;
 		this.head = null;
-		this.tail = null;
+	}
+
+	*[Symbol.iterator] () {
+		let current = this.head;
+
+		while (current) {
+			yield current;
+			current = current.next;
+		}
 	}
 	
 }

@@ -1,10 +1,12 @@
 //Queues
 const CircularBuffer = require('./src/queue/CircularBuffer');
+const Queue = require('./src/queue/Queue');
 const PriorityQueue = require('./src/queue/PriorityQueue');
 
 //Lists
 const LinkedList = require('./src/list/LinkedList');
 const SortedLinkedList = require('./src/list/SortedLinkedList');
+const DoubleLinkedList = require('./src/list/DoubleLinkedList');
 
 //Stacks
 const Stack = require('./src/stack/Stack');
@@ -23,13 +25,15 @@ const NoAllowedArgumentError = require('./src/error/NoAllowedArgumentError');
 module.exports = {
 
 	queue: {
+		Queue: Queue,
 		CircularBuffer: CircularBuffer,
 		PriorityQueue: PriorityQueue
 	},
 
 	list: {
 		LinkedList: LinkedList,
-		SortedLinkedList: SortedLinkedList
+		SortedLinkedList: SortedLinkedList,
+		DoubleLinkedList: DoubleLinkedList
 	},
 
 	stack: {
